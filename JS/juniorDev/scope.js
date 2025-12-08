@@ -41,57 +41,57 @@
 
 */
 
-let usdToKshRate = 130;
+// let usdToKshRate = 130;
 
-function updateExchangeRate() {
-  let newExchangeRate = prompt(
-    `Current exhange rate ${usdToKshRate}. Entery new Exhange rate`
-  );
-  //number
-  let numberExchangeRate = Number(newExchangeRate);
-  if (!numberExchangeRate) {
-    alert(`Enter a number to to change exhange rate`);
-    return;
-  }
-  usdToKshRate = numberExchangeRate;
-}
+// function updateExchangeRate() {
+//   let newExchangeRate = prompt(
+//     `Current exhange rate ${usdToKshRate}. Entery new Exhange rate`
+//   );
+//   //number
+//   let numberExchangeRate = Number(newExchangeRate);
+//   if (!numberExchangeRate) {
+//     alert(`Enter a number to to change exhange rate`);
+//     return;
+//   }
+//   usdToKshRate = numberExchangeRate;
+// }
 
-function printExchangeRate() {
-  alert(`The current exhange rate
-         1 USD = ${usdToKshRate} KSH
-        `);
-}
+// function printExchangeRate() {
+//   alert(`The current exhange rate
+//          1 USD = ${usdToKshRate} KSH
+//         `);
+// }
 
-function promptForUsd() {
-  let amountInUsd = prompt("Enter Amount in usd");
-  //Text or number
-  let amountNumber = Number(amountInUsd);
+// function promptForUsd() {
+//   let amountInUsd = prompt("Enter Amount in usd");
+//   //Text or number
+//   let amountNumber = Number(amountInUsd);
 
-  if (!amountNumber) {
-    alert("Enter the amount as a number");
-    return;
-  }
-  console.log(`amoun entered is a number ${amountNumber}`);
-  let kshAmount = usdToKshRate * amountNumber;
+//   if (!amountNumber) {
+//     alert("Enter the amount as a number");
+//     return;
+//   }
+//   console.log(`amoun entered is a number ${amountNumber}`);
+//   let kshAmount = usdToKshRate * amountNumber;
 
-  alert(`
-     For usd $${amountNumber}
-     Is equal ${kshAmount} KSH
-     Exchange Rate ${usdToKshRate}
-    `);
-}
+//   alert(`
+//      For usd $${amountNumber}
+//      Is equal ${kshAmount} KSH
+//      Exchange Rate ${usdToKshRate}
+//     `);
+// }
 
-let myVar1 = 5;
-function blockScope() {
-  let myVar1 = 120;
+// let myVar1 = 5;
+// function blockScope() {
+//   let myVar1 = 120;
 
-  if (true) {
-    myVar1 = 3;
-    console.log(myVar1);
-  }
-}
+//   if (true) {
+//     myVar1 = 3;
+//     console.log(myVar1);
+//   }
+// }
 
-blockScope();
+// blockScope();
 
 /*
  1.Create function name any thing
@@ -138,20 +138,54 @@ named the same way and console.log them
 */
 //{}
 
-let x = 45;
+// let x = 45;
 
+// function theParent() {
+//   let k = 10;
+//   let x = 99;
+//   if (true) {
+//     let x = 76;
+//     let z = 45;
+//     if (true) {
+//       let z = 45;
+//       console.log(k);
+//     }
+//     console.log(z);
+//   }
+//   console.log(z);
+// }
 
-function theParent() {
-  let k = 10;
-  let x=99
+/*
+  Scope :where can you access a variable ?.
+  2 types of scope:
+  1:Global Scope: Any variable or function not inside {} //block scope
+  2:Block : any variable or function inside {}
+
+  **You can have the same variables names
+  as long as they are in different scopes.
+
+  1. rule for global scope
+    any variable or function in global scope can be accesed
+    anywhere.
+   Scope rules 
+   ** Scope is like an onion (((currently)))
+   1.A child scope has access to parent scope variables.
+   2.A parent does not have access to child scope variables
+
+     
+*/
+
+// global scope
+let x = 23;
+if (true) {
+  let x = 50;
+  let y = 90;
+  console.log(x); //x=23// x=50
   if (true) {
-    let x=76
-     let z = 45;
-    if (true) {
-      let z = 45;
-      console.log(k);
-    }
-    console.log(z);
+    let z = 77;
+    console.log(x); //x =50
   }
-   console.log(z);
+  console.log(z); //Error z is undefined
 }
+
+console.log(y); //error y is undefined

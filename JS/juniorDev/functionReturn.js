@@ -13,6 +13,7 @@ function introduction() {
   //Rest of your code goes here
 
   console.log("I am a js developer");
+
   console.log("I am new to this");
   console.log("so far so good");
   console.log("");
