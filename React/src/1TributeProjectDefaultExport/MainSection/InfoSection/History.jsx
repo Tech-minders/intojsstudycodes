@@ -1,6 +1,6 @@
 function History() {
   return (
-    <div>
+    <div className=" text-2xl font-light">
       <p>
         Paul Kagame was born on October 23, 1957, in Gitarama, Rwanda, into a
         Tutsi family. In 1959, following the Rwandan Revolution that targeted

@@ -1,7 +1,7 @@
 function Facts() {
   return (
-    <div>
-      <ul>
+    <div className=" text-xl mt-4">
+      <ul className=" flex  flex-col gap-y-4">
         <li>
           <b>Full Name:</b> Paul Kagame
         </li>

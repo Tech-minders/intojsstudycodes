@@ -2,7 +2,7 @@ import kagamepic from "./../../assets/kageme.jpg";
 
 function ImageSection() {
   return (
-    <div>
+    <div className=" self-center">
       <img src={kagamepic} />
     </div>
   );
